@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthikeyan | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: #fff;
+            text-align: center;
+            transition: background 0.5s ease-in-out;
+        }/* Header */
+    header {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        animation: fadeIn 2s;
+    }
+
+    /* Navigation */
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        color: #ffcc00;
+        transform: scale(1.1);
+    }
+
+    /* Sections */
+    section {
+        margin-top: 120px;
+        padding: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+        font-weight: 700;
+    }
+
+    /* Contact Links */
+    #contact a {
+        color: #ffcc00;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+        color: #ff6600;
+    }
+
+    /* Dark Mode Button */
+    #dark-mode-toggle {
+        padding: 10px 15px;
+        background: #ffcc00;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: background 0.3s;
+        font-size: 16px;
+    }
+
+    #dark-mode-toggle:hover {
+        background: #ff6600;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        font-size: 14px;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: #fff;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Karthikeyan</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header><section id="about">
+    <h2>About Me</h2>
+    <p>Motivated and hardworking B.Sc Computer Science student with strong skills in Python, Java, and HTML.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Codehackathon Winner</strong> - Developed an innovative solution in a coding challenge.</li>
+        <li><strong>Hackverse Champion</strong> - Built a tech project that won a hackathon.</li>
+    </ul>
+</section>
+
+<section id="achievements">
+    <h2>Achievements & Awards</h2>
+    <ul>
+        <li>All-rounder Award in College</li>
+        <li>Winner of multiple hackathons</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:karthinag16145@gmail.com">karthinag16145@gmail.com</a></p>
+    <p>Phone: 8056834425</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Karthikeyan | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+    darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetSection = document.querySelector(this.getAttribute("href"));
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+    });
+</script>
+
+</body>
+                                         </html>
